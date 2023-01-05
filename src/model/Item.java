@@ -28,6 +28,6 @@ public class Item {
     @Override
     public String toString() {
         // TODO Auto-generated method stub
-        return this.name + ':' + ' ' + String.format("%d.%02d", this.price, 0);
+        return this.name + ':' + ' ' + String.format("%.2f", this.price / 100.0);
     }
 }
