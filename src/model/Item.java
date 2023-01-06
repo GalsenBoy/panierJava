@@ -10,7 +10,12 @@ public class Item {
     public Item(String name, long price, int weight) {
         this.name = name;
         this.price = price;
-        this.weight = weight;
+        if (weight > 10000) {
+            throw new IllegalStateException(
+                    "Le poids ne peut pas rentrer dans le panier il doit être inférieur à 10kg");
+        } else {
+            this.weight = weight;
+        }
     }
 
     public String getName() {
@@ -51,6 +56,6 @@ public class Item {
             return false;
         Item item = (Item) o;
         return Objects.equals(name, item.name) &&
-                price == item.price;
+                price == item.price && weight == item.weight;
     }
 }
