@@ -10,13 +10,19 @@ public class ShoppingCart {
         shop.add(item);
     }
 
+    public void removeItem(Item item) {
+        shop.remove(item);
+    }
+
     public int itemCount() {
         return shop.size();
     }
 
-    public double totalPrice() {
-        double total = 0;
-        return total;
+    public long totalPrice() {
+        long sum = 0;
+        for (Item i : shop) {
+            sum += i.getPrice();
+        }
+        return sum;
     }
-
 }
