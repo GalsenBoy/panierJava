@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Objects;
+
 public class Item {
     private String name;
     private long price;
@@ -30,4 +32,16 @@ public class Item {
         // TODO Auto-generated method stub
         return this.name + ':' + ' ' + String.format("%.2f", this.price / 100.0);
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == this)
+            return true;
+        if (!(o instanceof Item))
+            return false;
+        Item item = (Item) o;
+        return Objects.equals(name, item.name) &&
+                price == item.price;
+    }
+
 }
