@@ -10,6 +10,7 @@ public class ShoppingCart {
     private int id; //
 
     public ShoppingCart() {
+
         // Affecter à la variable d'instance `id` la valeur de `nextId` et incrémenter
         // `nextId` de 1
         id = nextId++;
@@ -37,6 +38,29 @@ public class ShoppingCart {
 
     public int getId() {
         return id;
+    }
+
+    public String getItemName() {
+        String itemName = "";
+        // String euro = "\u20AC";
+        for (Item item : shop) {
+            itemName += (item.getName()) + " " + String.format("%.2f", item.getPrice() / 100.0) + " €" + "\n";
+        }
+        return itemName;
+    }
+
+    public long getItemPrice() {
+        long itemPrice = 0;
+        for (Item item : shop) {
+            itemPrice += (item.getPrice());
+        }
+        return itemPrice;
+    }
+
+    @Override
+    public String toString() {
+        return "Panier " + this.id + " [" + this.itemCount() + " article (s)" + "]" + "\n"
+                + this.getItemName();
     }
 
 }
