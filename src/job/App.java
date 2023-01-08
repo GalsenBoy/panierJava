@@ -35,7 +35,7 @@ class App {
         // // cart.addItem(item3); // lève java.lang.IllegalStateException
         // cart.removeItem(new Item("water", 500, 5000));
         // cart.addItem(item3); // ajout possible!
-
+        //
         ShoppingCart c1 = new ShoppingCart();
         System.out.println(c1.getId()); // affiche: 1
         Item item1 = new Item("corn flakes", 501, 1000);
@@ -49,5 +49,14 @@ class App {
         c3.addItem(item3);
         System.out.println(c2.getId()); // affiche: 2
         System.out.println(c3.getId()); // affiche: 3
+
+        System.out.println(c1); // affiche: panier 1 [2 article(s)]
+        // corn flakes: 5.01 €
+        // caviar: 500.00 €
+
+        System.out.println(c2); // affiche: panier 2 [0 article(s)]
+
+        System.out.println(c3); // affiche: panier 3 [1 article(s)]
+        // water: 5.00 €
     }
 }
