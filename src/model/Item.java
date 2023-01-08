@@ -3,9 +3,9 @@ package model;
 import java.util.Objects;
 
 public class Item {
-    private String name;
-    private long price;
-    private int weight;
+    protected String name;
+    protected long price;
+    protected int weight;
 
     public Item(String name, long price, int weight) {
         this.name = name;
