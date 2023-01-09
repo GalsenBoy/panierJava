@@ -60,9 +60,17 @@ class App {
         // System.out.println(c3); // affiche: panier 3 [1 article(s)]
         // // water: 5.00 €
 
-        Item item1 = new Item("corn flakes", 500, 1000);
-        System.out.println(item1); // affiche: corn flakes: 5.00€
-        FreshItem fresh = new FreshItem("Salmon", 1450, 800, "2012-04-11");
-        System.out.println(fresh); // affiche: BBD:2012-04-11 Salmon: 14.50€
+        // Item item1 = new Item("corn flakes", 500, 1000);
+        // System.out.println(item1); // affiche: corn flakes: 5.00€
+        // FreshItem fresh = new FreshItem("Salmon", 1450, 800, "2012-04-11");
+        // System.out.println(fresh); // affiche: BBD:2012-04-11 Salmon: 14.50€
+
+        Item tin = new Item("sardine", 500, 500);
+        FreshItem fresh = new FreshItem("sardine", 500, 500, "2012-04-11");
+        ShoppingCart cart = new ShoppingCart();
+        cart.addItem(fresh);
+        cart.removeItem(tin);
+        System.out.println(cart); // affiche: panier 1 [1 article(s)]
+                                  // BBD: 2012-04-11 sardine: 5.00 €
     }
 }
