@@ -12,8 +12,9 @@ public class Payable {
         return this.price;
     }
 
-    public void taxRatePerTenThousand() {
-
+    public long taxRatePerTenThousand() {
+        long tax = this.price / 100;
+        return (tax / this.cost() * 10000);
     }
 
 }
