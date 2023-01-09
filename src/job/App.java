@@ -73,9 +73,17 @@ class App {
         // System.out.println(cart); // affiche: panier 1 [1 article(s)]
         // BBD: 2012-04-11 sardine: 5.00 €
 
-        Payable payable = new Ticket("RGBY17032012 - Walles-France", 9000);
-        System.out.println(payable.label()); // affiche: RGBY17032012 - Walles-France
-        System.out.println(payable.cost()); // affiche: 9000
-        System.out.println(payable.taxRatePerTenThousand()); // affiche: 2500
+        // Payable payable = new Ticket("RGBY17032012 - Walles-France", 9000);
+        // System.out.println(payable.label()); // affiche: RGBY17032012 - Walles-France
+        // System.out.println(payable.cost()); // affiche: 9000
+        // System.out.println(payable.taxRatePerTenThousand()); // affiche: 2500
+
+        Invoice invoice = new Invoice();
+        Payable payable = new Ticket("RGBY20120317 - Walles-France", 9000);
+        Ticket ticket = new Ticket("MUSI20120612 - RollingStones", 12000);
+        invoice.add(payable);
+        invoice.add(ticket);
+        Item item = new Item("corn flakes", 500, 1000);
+        invoice.add(item);
     }
 }
