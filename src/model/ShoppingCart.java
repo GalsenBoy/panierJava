@@ -24,6 +24,10 @@ public class ShoppingCart {
         shop.remove(item);
     }
 
+    public void removeItem(FreshItem fresh) {
+        shop.remove(fresh);
+    }
+
     public int itemCount() {
         return shop.size();
     }
@@ -49,7 +53,7 @@ public class ShoppingCart {
         return itemName;
     }
 
-    public long getItemPrice() {
+    public long getItemSum() {
         long itemPrice = 0;
         for (Item item : shop) {
             itemPrice += (item.getPrice());
