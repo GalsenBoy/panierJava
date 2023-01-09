@@ -6,5 +6,4 @@ public class Ticket extends Payable {
         this.reference = reference;
         this.price = price;
     }
-
 }

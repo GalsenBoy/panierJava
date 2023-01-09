@@ -76,6 +76,6 @@ class App {
         Payable payable = new Ticket("RGBY17032012 - Walles-France", 9000);
         System.out.println(payable.label()); // affiche: RGBY17032012 - Walles-France
         System.out.println(payable.cost()); // affiche: 9000
-        // System.out.println(payable.taxRatePerTenThousand()); // affiche: 2500
+        System.out.println(payable.taxRatePerTenThousand()); // affiche: 2500
     }
 }
