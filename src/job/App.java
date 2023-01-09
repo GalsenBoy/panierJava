@@ -65,12 +65,17 @@ class App {
         // FreshItem fresh = new FreshItem("Salmon", 1450, 800, "2012-04-11");
         // System.out.println(fresh); // affiche: BBD:2012-04-11 Salmon: 14.50€
 
-        Item tin = new Item("sardine", 500, 500);
-        FreshItem fresh = new FreshItem("sardine", 500, 500, "2012-04-11");
-        ShoppingCart cart = new ShoppingCart();
-        cart.addItem(fresh);
-        cart.removeItem(tin);
-        System.out.println(cart); // affiche: panier 1 [1 article(s)]
-                                  // BBD: 2012-04-11 sardine: 5.00 €
+        // Item tin = new Item("sardine", 500, 500);
+        // FreshItem fresh = new FreshItem("sardine", 500, 500, "2012-04-11");
+        // ShoppingCart cart = new ShoppingCart();
+        // cart.addItem(fresh);
+        // cart.removeItem(tin);
+        // System.out.println(cart); // affiche: panier 1 [1 article(s)]
+        // BBD: 2012-04-11 sardine: 5.00 €
+
+        Payable payable = new Ticket("RGBY17032012 - Walles-France", 9000);
+        System.out.println(payable.label()); // affiche: RGBY17032012 - Walles-France
+        System.out.println(payable.cost()); // affiche: 9000
+        // System.out.println(payable.taxRatePerTenThousand()); // affiche: 2500
     }
 }
